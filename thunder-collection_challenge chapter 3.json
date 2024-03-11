@@ -1,0 +1,106 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "challenge chapter 3",
+    "dateExported": "2024-03-11T07:03:48.583Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "dc349413-c493-4f03-acd8-1fff1c9ffe43",
+            "colId": "94038705-1a8c-4326-ad7a-1111a8eab04e",
+            "containerId": "",
+            "name": "/",
+            "url": "http://localhost:2000/",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-03-11T04:47:50.428Z",
+            "modified": "2024-03-11T04:47:58.717Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "40ccd1d8-fef6-479d-a739-4b26232af95b",
+            "colId": "94038705-1a8c-4326-ad7a-1111a8eab04e",
+            "containerId": "",
+            "name": "list cars",
+            "url": "http://localhost:2000/cars",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-11T04:26:59.987Z",
+            "modified": "2024-03-11T04:29:05.767Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c693e49e-c682-4c28-9068-d507faf56a4f",
+            "colId": "94038705-1a8c-4326-ad7a-1111a8eab04e",
+            "containerId": "",
+            "name": "detail car",
+            "url": "http://localhost:2000/cars/newcar-2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-11T04:52:17.436Z",
+            "modified": "2024-03-11T06:49:23.935Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "3167c01d-7100-4229-a1ba-52d3129c5a65",
+            "colId": "94038705-1a8c-4326-ad7a-1111a8eab04e",
+            "containerId": "",
+            "name": "create car",
+            "url": "http://localhost:2000/cars/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-11T05:10:47.840Z",
+            "modified": "2024-03-11T06:30:33.037Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\": \"newcar-3\",\n    \"plate\": \"AG 987\",\n    \"manufacture\": \"my-mnfctr\",\n    \"model\": \"mdl-3\",\n    \"image\": \"./images/newcar-3.jpg\",\n    \"rentPerDay\": 15000,\n    \"capacity\": 2,\n    \"description\": \"Anti Mogok Nih Bang!\",\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\n    \"transmission\": \"Automatic\",\n    \"available\": true,\n    \"type\": \"amfibi\",\n    \"year\": 1945,\n    \"options\": [\n      \"Cruise Control\",\n      \"AM/FM Stereo\"\n    ],\n    \"specs\": [\n      \"Auto Pilot\",\n      \"Brake assist\"\n    ]\n  }",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "c54a96a3-7616-4df1-b301-5312a0b35edd",
+            "colId": "94038705-1a8c-4326-ad7a-1111a8eab04e",
+            "containerId": "",
+            "name": "update car",
+            "url": "http://localhost:2000/cars/newcar-2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-11T06:02:16.646Z",
+            "modified": "2024-03-11T06:58:52.931Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"plate\": \"AG 12345\",\n    \"manufacture\": \"my-mnfctr\",\n    \"model\": \"mdl-1\",\n    \"image\": \"./images/newcar-1.jpg\",\n    \"rentPerDay\": 10000,\n    \"capacity\": 4,\n    \"description\": \"Anti Mogok Nih Bang!\",\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\n    \"transmission\": \"Automatic\",\n    \"available\": true,\n    \"type\": \"amfibi kek kodok\",\n    \"year\": 2000,\n    \"options\": [\n      \"Terserah Kamu\"\n    ],\n    \"specs\": [\n      \"Auto Pilot\"\n    ]\n  }",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "f9a5c95f-cddc-4ada-9a0a-e69e7a5e1cca",
+            "colId": "94038705-1a8c-4326-ad7a-1111a8eab04e",
+            "containerId": "",
+            "name": "delete car",
+            "url": "http://localhost:2000/cars/newcar-3",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-03-11T06:31:27.025Z",
+            "modified": "2024-03-11T07:01:00.251Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
