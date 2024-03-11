@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "1766e05d-3812-4b4e-8e83-17e1e2864cdf",
+		"name": "Binar KM 6 - Chapter 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22814931"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cars:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/cars/e76e884b-8f3e-4b90-a717-9239676d0191",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"cars",
+						"e76e884b-8f3e-4b90-a717-9239676d0191"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cars",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"newcar-1\",\r\n    \"plate\": \"AG 987\",\r\n    \"manufacture\": \"my-mnfctr\",\r\n    \"model\": \"mdl-3\",\r\n    \"image\": \"./images/newcar-3.jpg\",\r\n    \"rentPerDay\": 15000,\r\n    \"capacity\": 2,\r\n    \"description\": \"Anti Mogok Nih Bang!\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"amfibi\",\r\n    \"year\": 1945,\r\n    \"options\": [\r\n      \"Cruise Control\",\r\n      \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n      \"Auto Pilot\",\r\n      \"Brake assist\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cars:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plate\": \"AG 12345\",\r\n    \"manufacture\": \"my-mnfctr\",\r\n    \"model\": \"mdl-1\",\r\n    \"image\": \"./images/newcar-1.jpg\",\r\n    \"rentPerDay\": 10000,\r\n    \"capacity\": 4,\r\n    \"description\": \"Anti Mogok Nih Bang!\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"amfibi kek kodok\",\r\n    \"year\": 2000,\r\n    \"options\": [\r\n      \"Terserah Kamu\"\r\n    ],\r\n    \"specs\": [\r\n      \"Auto Pilot\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/cars/newcar-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"cars",
+						"newcar-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cars:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/cars/newcar-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"cars",
+						"newcar-1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
