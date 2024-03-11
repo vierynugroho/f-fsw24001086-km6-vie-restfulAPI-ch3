@@ -9,6 +9,12 @@ const getAll = () => {
 const getById = async (id) => {
 	const cars = await getAll();
 	const car = cars.find((car) => car.id === id);
+
+	//! validation if not found
+	if (!car) {
+		throw Error('Car not found!');
+	}
+
 	return car;
 };
 
@@ -19,7 +25,7 @@ const insertCar = async (data) => {
 	newCar.push(data);
 	fs.writeFileSync('./public/data/cars.json', JSON.stringify(newCar));
 
-	return newCar;
+	return data;
 };
 
 const putCar = async (id, data) => {
@@ -41,12 +47,19 @@ const putCar = async (id, data) => {
 	car.options = data.options;
 	car.specs = data.specs;
 
-	const updatedCar = [...cars];
-	updatedCar.map((c) => (c.id === id ? car : c));
-	fs.writeFileSync('./public/data/cars.json', JSON.stringify(updatedCar));
+	const updatedCars = cars.map((c) => (c.id === id ? car : c));
+	fs.writeFileSync('./public/data/cars.json', JSON.stringify(updatedCars));
+
+	return updatedCars;
 };
 
-const destroyCar = async (id) => {};
+const destroyCar = async (id) => {
+	const cars = await getAll();
+	const car = await getById(id);
+
+	const carsUnDeleted = cars.filter((car) => car.id !== id);
+	fs.writeFileSync('./public/data/cars.json', JSON.stringify(carsUnDeleted));
+};
 
 module.exports = {
 	getAll,
