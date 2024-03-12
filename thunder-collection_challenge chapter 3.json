@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "challenge chapter 3",
-    "dateExported": "2024-03-11T07:24:18.320Z",
+    "dateExported": "2024-03-12T16:53:07.473Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -57,12 +57,12 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2024-03-11T05:10:47.840Z",
-            "modified": "2024-03-11T06:30:33.037Z",
+            "modified": "2024-03-12T16:50:52.289Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"id\": \"newcar-3\",\n    \"plate\": \"AG 987\",\n    \"manufacture\": \"my-mnfctr\",\n    \"model\": \"mdl-3\",\n    \"image\": \"./images/newcar-3.jpg\",\n    \"rentPerDay\": 15000,\n    \"capacity\": 2,\n    \"description\": \"Anti Mogok Nih Bang!\",\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\n    \"transmission\": \"Automatic\",\n    \"available\": true,\n    \"type\": \"amfibi\",\n    \"year\": 1945,\n    \"options\": [\n      \"Cruise Control\",\n      \"AM/FM Stereo\"\n    ],\n    \"specs\": [\n      \"Auto Pilot\",\n      \"Brake assist\"\n    ]\n  }",
+                "raw": "{\n    \"plate\": \"AG 987\",\n    \"manufacture\": \"my-mnfctr\",\n    \"model\": \"mdl-3\",\n    \"image\": \"./images/newcar-3.jpg\",\n    \"rentPerDay\": 15000,\n    \"capacity\": 2,\n    \"description\": \"Anti Mogok Nih Bang!\",\n    \"transmission\": \"Automatic\",\n    \"availableAt\": \"2024-03-13T04:47:50.663Z\",\n    \"available\": true,\n    \"type\": \"amfibi\",\n    \"year\": 1945,\n    \"options\": [\n      \"Cruise Control\",\n      \"AM/FM Stereo\"\n    ],\n    \"specs\": [\n      \"Auto Pilot\",\n      \"Brake assist\"\n    ]\n  }",
                 "form": []
             },
             "reqType": "post",
@@ -93,13 +93,14 @@
             "colId": "94038705-1a8c-4326-ad7a-1111a8eab04e",
             "containerId": "",
             "name": "delete car",
-            "url": "http://localhost:2000/cars/newcar-3",
+            "url": "http://localhost:2000/cars/a999f5d2-1cbf-4a83-9ebe-ce6356acedce",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2024-03-11T06:31:27.025Z",
-            "modified": "2024-03-11T07:01:00.251Z",
+            "modified": "2024-03-12T16:52:52.101Z",
             "headers": [],
             "params": [],
+            "reqType": "del",
             "tests": []
         }
     ]

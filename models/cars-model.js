@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { randomUUID } = require('crypto');
 const fs = require('fs');
 
 const getAll = () => {
@@ -20,6 +21,24 @@ const getById = async (id) => {
 
 const insertCar = async (data) => {
 	const cars = await getAll();
+
+	//TODO: if availableAt auto generate
+	// // ! Generate availableAt
+	// function getRandomInt(min, max) {
+	// 	min = Math.ceil(min);
+	// 	max = Math.floor(max);
+	// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+	// }
+
+	// const now = new Date();
+	// const isPositive = getRandomInt(0, 1) === 1;
+	// const mutator = getRandomInt(1000000, 100000000);
+	// const carAvailableAt = new Date(now.getTime() + (isPositive ? mutator : -1 * mutator));
+
+	// //! insert custom data to data req body
+	// data.availableAt = carAvailableAt;
+	//! insert custom data to data req body
+	data.id = randomUUID();
 
 	const newCar = [...cars];
 	newCar.push(data);
