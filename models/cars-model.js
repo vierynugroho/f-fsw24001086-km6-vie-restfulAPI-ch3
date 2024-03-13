@@ -69,7 +69,7 @@ const putCar = async (id, data) => {
 	const updatedCars = cars.map((c) => (c.id === id ? car : c));
 	fs.writeFileSync('./public/data/cars.json', JSON.stringify(updatedCars));
 
-	return updatedCars;
+	return data;
 };
 
 const destroyCar = async (id) => {

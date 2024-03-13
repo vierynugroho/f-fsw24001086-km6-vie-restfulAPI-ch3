@@ -50,7 +50,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:2000/cars/e76e884b-8f3e-4b90-a717-9239676d0191",
+					"raw": "http://localhost:2000/cars/8b465eef-6a70-4941-a03d-675293f1501b",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -58,7 +58,7 @@
 					"port": "2000",
 					"path": [
 						"cars",
-						"e76e884b-8f3e-4b90-a717-9239676d0191"
+						"8b465eef-6a70-4941-a03d-675293f1501b"
 					]
 				}
 			},
@@ -71,7 +71,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"newcar-1\",\r\n    \"plate\": \"AG 987\",\r\n    \"manufacture\": \"my-mnfctr\",\r\n    \"model\": \"mdl-3\",\r\n    \"image\": \"./images/newcar-3.jpg\",\r\n    \"rentPerDay\": 15000,\r\n    \"capacity\": 2,\r\n    \"description\": \"Anti Mogok Nih Bang!\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"amfibi\",\r\n    \"year\": 1945,\r\n    \"options\": [\r\n      \"Cruise Control\",\r\n      \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n      \"Auto Pilot\",\r\n      \"Brake assist\"\r\n    ]\r\n  }",
+					"raw": "{\r\n    \"plate\": \"AG 987\",\r\n    \"manufacture\": \"my-mnfctr\",\r\n    \"model\": \"mdl-3\",\r\n    \"image\": \"./images/newcar-3.jpg\",\r\n    \"rentPerDay\": 15000,\r\n    \"capacity\": 2,\r\n    \"description\": \"Anti Mogok Nih Bang!\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"amfibi\",\r\n    \"year\": 1945,\r\n    \"options\": [\r\n      \"Cruise Control\",\r\n      \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n      \"Auto Pilot\",\r\n      \"Brake assist\"\r\n    ]\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -99,7 +99,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"plate\": \"AG 12345\",\r\n    \"manufacture\": \"my-mnfctr\",\r\n    \"model\": \"mdl-1\",\r\n    \"image\": \"./images/newcar-1.jpg\",\r\n    \"rentPerDay\": 10000,\r\n    \"capacity\": 4,\r\n    \"description\": \"Anti Mogok Nih Bang!\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"amfibi kek kodok\",\r\n    \"year\": 2000,\r\n    \"options\": [\r\n      \"Terserah Kamu\"\r\n    ],\r\n    \"specs\": [\r\n      \"Auto Pilot\"\r\n    ]\r\n  }",
+					"raw": "{\r\n    \"plate\": \"AG 12345\",\r\n    \"manufacture\": \"my-mnfctr\",\r\n    \"model\": \"mdl-1\",\r\n    \"image\": \"./images/newcar-update.jpg\",\r\n    \"rentPerDay\": 10000,\r\n    \"capacity\": 4,\r\n    \"description\": \"Anti Mogok Nih Bang!\",\r\n    \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n    \"transmission\": \"Automatic\",\r\n    \"available\": true,\r\n    \"type\": \"amfibi kek kodok\",\r\n    \"year\": 2000,\r\n    \"options\": [\r\n      \"Terserah Kamu\"\r\n    ],\r\n    \"specs\": [\r\n      \"Auto Pilot\"\r\n    ]\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -107,7 +107,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:2000/cars/newcar-1",
+					"raw": "http://localhost:2000/cars/8411ee17-4d9c-468f-9c29-e9a4dd0d31e2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -115,7 +115,7 @@
 					"port": "2000",
 					"path": [
 						"cars",
-						"newcar-1"
+						"8411ee17-4d9c-468f-9c29-e9a4dd0d31e2"
 					]
 				}
 			},
