@@ -51,27 +51,13 @@ const putCar = async (id, data) => {
 	const cars = await getAll();
 	const car = await getById(id);
 
-	car.plate = data.plate;
-	car.manufacture = data.manufacture;
-	car.model = data.model;
-	car.image = data.image;
-	car.rentPerDay = data.rentPerDay;
-	car.capacity = data.capacity;
-	car.description = data.description;
-	car.availableAt = data.availableAt;
-	car.transmission = data.transmission;
-	car.available = data.available;
-	car.type = data.type;
-	car.year = data.year;
-	car.options = data.options;
-	car.specs = data.specs;
+	const updatedCar = { ...car, ...data };
 
-	const updatedCars = cars.map((c) => (c.id === id ? car : c));
+	const updatedCars = cars.map((c) => (c.id === id ? updatedCar : c));
 	fs.writeFileSync('./public/data/cars.json', JSON.stringify(updatedCars));
 
 	return data;
 };
-
 const destroyCar = async (id) => {
 	const cars = await getAll();
 	const car = await getById(id);
