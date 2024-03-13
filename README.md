@@ -1,5 +1,5 @@
 <h1 align="center">
-  Chapter 2 - Live Coding All Day
+  Chapter 3 - Challenge
 </h1>
 
 # Data Diri
