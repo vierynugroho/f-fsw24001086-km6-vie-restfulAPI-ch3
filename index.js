@@ -23,6 +23,13 @@ app.get('/', (req, res) => {
 
 app.use('/cars', carsRoute);
 
+app.use((req, res) => {
+	res.status(404).json({
+		status: 'NOT FOUND',
+		message: '404 - Page Not Found',
+	});
+});
+
 app.listen(PORT, () => {
 	console.log(`Yohoo! running in http://localhost:${PORT}`);
 });
