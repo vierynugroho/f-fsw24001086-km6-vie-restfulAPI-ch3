@@ -39,6 +39,19 @@ const getCarsById = async (req, res) => {
 const createCar = async (req, res) => {
 	try {
 		const data = req.body;
+		const requireFields = ['plate', 'manufacture', 'model', 'image', 'rentPerDay', 'capacity', 'availableAt', 'transmission', 'available', 'type', 'year'];
+		const extensionImage = ['jpg', 'jpeg', 'png'];
+		const getExtension = data.image.split('.').pop().toLowerCase();
+
+		for (const field of requireFields) {
+			if (!data[field]) {
+				return res.status(400).json({ status: 'Bad Request', error: `Missing required field ${field}` });
+			} else if (!extensionImage.includes(getExtension)) {
+				return res.status(400).json({ status: 'Bad Request', error: 'Invalid image extension', validExtension: extensionImage });
+			} else if (getAll().some((car) => car.plate === data.plate)) {
+				return res.status(400).json({ status: 'Bad Request', error: 'Plate number cannot be the same' });
+			}
+		}
 		const car = await insertCar(data);
 
 		res.status(201).json({
