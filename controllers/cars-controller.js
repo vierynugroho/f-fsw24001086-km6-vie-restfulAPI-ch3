@@ -1,3 +1,5 @@
+const carInputValidation = require('../middlewares/carInputValidation');
+const checkImageField = require('../middlewares/imageFieldCheck');
 const { getAll, getById, insertCar, putCar, destroyCar } = require('../models/cars-model');
 
 const getAllCars = async (req, res) => {
@@ -12,7 +14,7 @@ const getAllCars = async (req, res) => {
 		});
 	} catch (error) {
 		res.status(500).json({
-			status: 500,
+			status: 'FAIL',
 			message: `${error}`,
 		});
 	}
@@ -29,9 +31,9 @@ const getCarsById = async (req, res) => {
 			data: car,
 		});
 	} catch (error) {
-		res.status(500).json({
-			status: 500,
-			message: `${error}`,
+		res.status(404).json({
+			status: 'NOT FOUND',
+			message: error.message,
 		});
 	}
 };
@@ -39,64 +41,63 @@ const getCarsById = async (req, res) => {
 const createCar = async (req, res) => {
 	try {
 		const data = req.body;
-		const requireFields = ['plate', 'manufacture', 'model', 'image', 'rentPerDay', 'capacity', 'availableAt', 'transmission', 'available', 'type', 'year'];
-		const extensionImage = ['jpg', 'jpeg', 'png'];
-		const getExtension = data.image.split('.').pop().toLowerCase();
 
-		for (const field of requireFields) {
-			if (!data[field]) {
-				return res.status(400).json({ status: 'Bad Request', error: `Missing required field ${field}` });
-			} else if (!extensionImage.includes(getExtension)) {
-				return res.status(400).json({ status: 'Bad Request', error: 'Invalid image extension', validExtension: extensionImage });
-			} else if (getAll().some((car) => car.plate === data.plate)) {
-				return res.status(400).json({ status: 'Bad Request', error: 'Plate number cannot be the same' });
-			}
-		}
+		//! validation middleware
+		checkImageField(data.image);
+		carInputValidation('post', data);
+
 		const car = await insertCar(data);
 
 		res.status(201).json({
-			status: 'CREATED',
+			status: 'OK',
 			message: 'CREATE car success!',
 			data: car,
 		});
 	} catch (error) {
-		res.status(500).json({
-			status: 500,
-			message: `${error}`,
+		res.status(400).json({
+			status: 'FAIL',
+			message: error.message,
 		});
 	}
 };
+
 const updateCar = async (req, res) => {
 	try {
 		const id = req.params.id;
 		const data = req.body;
+
+		//! validation middleware
+		checkImageField(data.image);
+		carInputValidation('put', data);
+
 		const car = await putCar(id, data);
 
-		res.status(201).json({
-			status: 'UPDATED',
+		res.status(200).json({
+			status: 'OK',
 			message: 'UPDATE car success!',
 			data: car,
 		});
 	} catch (error) {
 		res.status(500).json({
-			status: 500,
-			message: `${error}`,
+			status: 'FAIL',
+			message: error.message,
 		});
 	}
 };
+
 const deleteCar = async (req, res) => {
 	try {
 		const id = req.params.id;
 		await destroyCar(id);
 
 		res.status(200).json({
-			status: 'DELETED',
+			status: 'OK',
 			message: 'DELETE car success!',
 		});
 	} catch (error) {
 		res.status(500).json({
-			status: 500,
-			message: `${error}`,
+			status: 'FAIL',
+			message: error.message,
 		});
 	}
 };
