@@ -3,10 +3,7 @@ const { getAllCars, getCarsById, createCar, updateCar, deleteCar } = require('..
 
 const router = express.Router();
 
-router.get('/', getAllCars);
-router.get('/:id', getCarsById);
-router.post('/', createCar);
-router.put('/:id', updateCar);
-router.delete('/:id', deleteCar);
+router.route('/').get(getAllCars).post(createCar);
+router.route('/:id').get(getCarsById).put(updateCar).delete(deleteCar);
 
 module.exports = router;
