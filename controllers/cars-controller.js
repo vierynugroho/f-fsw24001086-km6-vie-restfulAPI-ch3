@@ -1,5 +1,4 @@
 const carInputValidation = require('../middlewares/carInputValidation');
-const checkImageField = require('../middlewares/imageFieldCheck');
 const { getAll, getById, insertCar, putCar, destroyCar } = require('../models/cars-model');
 
 const getAllCars = async (req, res) => {
@@ -43,7 +42,6 @@ const createCar = async (req, res) => {
 		const data = req.body;
 
 		//! validation middleware
-		checkImageField(data.image);
 		carInputValidation('post', data);
 
 		const car = await insertCar(data);
@@ -67,7 +65,6 @@ const updateCar = async (req, res) => {
 		const data = req.body;
 
 		//! validation middleware
-		checkImageField(data.image);
 		carInputValidation('put', data);
 
 		const car = await putCar(id, data);
