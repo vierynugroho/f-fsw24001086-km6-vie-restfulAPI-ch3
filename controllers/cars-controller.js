@@ -78,7 +78,7 @@ const updateCar = async (req, res) => {
 			data: car,
 		});
 	} catch (error) {
-		res.status(500).json({
+		res.status(400).json({
 			status: 'FAIL',
 			message: error.message,
 		});
@@ -95,7 +95,7 @@ const deleteCar = async (req, res) => {
 			message: 'DELETE car success!',
 		});
 	} catch (error) {
-		res.status(500).json({
+		res.status(400).json({
 			status: 'FAIL',
 			message: error.message,
 		});
