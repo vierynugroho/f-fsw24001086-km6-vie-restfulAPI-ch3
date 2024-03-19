@@ -1,4 +1,4 @@
-const carInputValidation = require('../middlewares/carInputValidation');
+const carInputValidation = require('../services/carInputValidation');
 const { getAll, getById, insertCar, putCar, destroyCar } = require('../models/cars-model');
 
 const getAllCars = async (req, res) => {
